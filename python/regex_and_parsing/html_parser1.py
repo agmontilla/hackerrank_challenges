@@ -43,11 +43,6 @@ def main() -> None:
     parser = MyHTMLParser()
     parser.feed("".join(html_content))
 
-    # parser.feed("<html><head><title>HTML Parser - I</title></head>" +
-    #             "<body data-modal-target class='1'><h1>HackerRank</h1><br /></body></html>")
-    # parser.feed("<html><head><title>HTML Parser - I</title></head>"
-    #             + "<body><h1>HackerRank</h1><br /></body></html>")
-
 
 if __name__ == "__main__":
     main()
