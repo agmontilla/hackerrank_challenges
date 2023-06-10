@@ -1,3 +1,4 @@
+from typing import List
 from html.parser import HTMLParser
 
 # create a subclass and override the handler methods
@@ -17,7 +18,7 @@ class MyHTMLParser(HTMLParser):
 class Reader():
     MAX_LINES = 100
 
-    def readlines(self) -> list[str]:
+    def readlines(self) -> List[str]:
         number_of_lines = int(input())
         if number_of_lines > self.MAX_LINES:
             raise ValueError("Number of lines is too big")
