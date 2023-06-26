@@ -10,7 +10,7 @@ def solve(s: str) -> str:
 
 
 def main() -> None:
-    print(solve("hello world"))
+    print(solve(input()))
 
 
 if __name__ == '__main__':
