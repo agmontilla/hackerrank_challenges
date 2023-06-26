@@ -6,7 +6,7 @@ MINUS = '-'
 
 
 def is_odd(n: int) -> bool:
-    if n/2. == 0:
+    if n % 2 == 0:
         raise ValueError(f'{n} is not a odd number')
 
     return True
