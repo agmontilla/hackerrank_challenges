@@ -14,9 +14,10 @@ I've added a GitHub action workflow to run unit tests automatically. My workflow
 
 ## Coverage
 
-**TODO**: It should be based on [this](https://github.com/marketplace/actions/install-poetry-action#codecov-upload) but I'm going to check it.
+I've added the integration with [Codecov](https://docs.codecov.com/docs) to check coverage. This was built using [this](https://github.com/marketplace/actions/install-poetry-action#codecov-upload)
 
 Other posibilities are:
 
+- https://www.freecodecamp.org/news/how-to-generate-code-coverage-report-with-codecov-and-github-actions/
 - https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#testing-with-pytest-and-pytest-cov
 - https://nedbatchelder.com/blog/202209/making_a_coverage_badge.html
