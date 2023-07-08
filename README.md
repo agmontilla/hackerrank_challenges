@@ -16,6 +16,10 @@ I've added a GitHub action workflow to run unit tests automatically. My workflow
 
 I've added the integration with [Codecov](https://docs.codecov.com/docs) to check coverage. This was built using [this](https://github.com/marketplace/actions/install-poetry-action#codecov-upload)
 
+TODO:
+
+- Check [coverage](https://coverage.readthedocs.io/en/latest/config.html) to improve coverage status
+
 Other posibilities are:
 
 - https://www.freecodecamp.org/news/how-to-generate-code-coverage-report-with-codecov-and-github-actions/
