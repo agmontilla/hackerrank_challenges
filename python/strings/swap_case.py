@@ -4,7 +4,7 @@ def swap_case(s: str) -> str:
 
 
 def main() -> None:
-    sample = "HackerRank.com presents \"Pythonist 2\"."
+    sample = input()
     print(swap_case(sample))
 
 
