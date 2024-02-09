@@ -14,32 +14,32 @@ This PR contains:
 
 ## Code review checklist
 
-- [] My code follows the style guidelines of this project
-- [] Are linters used?
-- [] Is it clear what given class/method/function does?
-- [] Do names reflect what code does?
-- [] Have you tried the code locally?
-- [] Are exceptions handled correctly?
-- [] Check usage of third party libraries (production-ready, copyright, etc).
-- [] Can we generalize something (for reuse)?
-- [] Have checked that the new modifications don't break other code?
-- [] Are the tests for the modification implemented?
-- [] These tests prove that my fix is effective or that my feature works?
-- [] Are all the thest passed?
-- [] The coverage of tests is high enough?
-- [] I have performed a self-review of my own code
-- [] I have commented my code, particularly in hard-to-understand areas
-- [] I have made corresponding changes to the documentation
-- [] My changes generate no new warnings
-- [] Is something missing? (test, docs, metrics, logging, etc)
+- [x] My code follows the style guidelines of this project
+- [x] Are linters used?
+- [x] Is it clear what given class/method/function does?
+- [x] Do names reflect what code does?
+- [x] Have you tried the code locally?
+- [x] Are exceptions handled correctly?
+- [x] Check usage of third party libraries (production-ready, copyright, etc).
+- [x] Can we generalize something (for reuse)?
+- [x] Have checked that the new modifications don't break other code?
+- [x] Are the tests for the modification implemented?
+- [x] These tests prove that my fix is effective or that my feature works?
+- [x] Are all the thest passed?
+- [x] The coverage of tests is high enough?
+- [x] I have performed a self-review of my own code
+- [x] I have commented my code, particularly in hard-to-understand areas
+- [x] I have made corresponding changes to the documentation
+- [x] My changes generate no new warnings
+- [x] Is something missing? (test, docs, metrics, logging, etc)
 
 ### About the issue
 
-- [] Is the Acceptance criteria from the ticket met?
-- [] Is the issue ready, according to the project’s Definition Of Done?
-- [] In the implementation, is there anything interesting to register for
+- [x] Is the Acceptance criteria from the ticket met?
+- [x] Is the issue ready, according to the project’s Definition Of Done?
+- [x] In the implementation, is there anything interesting to register for
   the technical retrospective meeting?
-- [] Was any technical-debt acquired and is it properly registered?
+- [x] Was any technical-debt acquired and is it properly registered?
 
 ## Setting up local & testing
 
