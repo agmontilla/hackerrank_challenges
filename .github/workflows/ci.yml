@@ -59,23 +59,23 @@ jobs:
       #----------------------------------------------
       - name: Run tests
         run: poetry run pytest --cov --cov-report=xml
-      
       #----------------------------------------------
-      #             Set env variable
-      # - to know if github action is running locally
+      #             Set LOCAL env variable
+      # LOCAL is set to true if running locally. 
+      # If running locally, coverage stats are not uploaded in the next step
+      # Note: 
+      # - LOCAL value depends on the ACT env variable.
+      # - ACT is a env variable created by "act" tool used to run github actions locally
       #----------------------------------------------
-      - name: View env var first
-        run: |
-            env | grep GITHUB_ENV
-      - name: Set env variable
+      - name: Set LOCAL env variable
         run: |
           if [[ $ACT == 'true' ]]; then
             echo "LOCAL=true" >> "$GITHUB_ENV"
           else
             echo "LOCAL=false" >> "$GITHUB_ENV"
           fi
-      - name: Check if LOCAL is set
-        run: echo "LOCAL=${{ env.LOCAL }}, ACT=$ACT"
+      - name: Check if env LOCAL variable was set
+        run: echo "LOCAL=${{ env.LOCAL }}"
       #----------------------------------------------
       #             upload coverage stats
       # (requires CODECOV_TOKEN in repository secrets)
