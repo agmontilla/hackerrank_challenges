@@ -22,7 +22,7 @@ jobs:
         id: setup-python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: "3.9.13"
       #----------------------------------------------
       #  -----  install & configure poetry  -----
       #----------------------------------------------
@@ -59,12 +59,27 @@ jobs:
       #----------------------------------------------
       - name: Run tests
         run: poetry run pytest --cov --cov-report=xml
+      
+      #----------------------------------------------
+      #             Set env variable
+      # - to know if github action is running locally
+      #----------------------------------------------
+      - name: Set env variable
+        run: |
+          if [[ $ACT == 'true' ]]; then
+              export LOCAL=true
+          else
+              echo LOCAL=false
+          fi
+          echo "ACT=$ACT, LOCAL=$LOCAL"
       #----------------------------------------------
       #             upload coverage stats
       # (requires CODECOV_TOKEN in repository secrets)
       #----------------------------------------------
       - name: Upload coverage
-        uses: codecov/codecov-action@v3
+        if: ${{ env.LOCAL == 'false' }}
+        uses: codecov/codecov-action@v4
         with:
           file: ./coverage.xml
           fail_ci_if_error: true
+          token: ${{ secrets.CODECOV_TOKEN }}
