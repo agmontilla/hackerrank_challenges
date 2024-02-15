@@ -69,7 +69,7 @@ jobs:
           if [[ $ACT == 'true' ]]; then
               export LOCAL=true
           else
-              echo LOCAL=false
+              export LOCAL=false
           fi
           echo "ACT=$ACT, LOCAL=$LOCAL"
       #----------------------------------------------
