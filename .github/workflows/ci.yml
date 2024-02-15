@@ -64,14 +64,18 @@ jobs:
       #             Set env variable
       # - to know if github action is running locally
       #----------------------------------------------
+      - name: View env var first
+        run: |
+            env | grep GITHUB_ENV
       - name: Set env variable
         run: |
           if [[ $ACT == 'true' ]]; then
-              export LOCAL=true
+            echo "LOCAL=true" >> "$GITHUB_ENV"
           else
-              export LOCAL=false
+            echo "LOCAL=false" >> "$GITHUB_ENV"
           fi
-          echo "ACT=$ACT, LOCAL=$LOCAL"
+      - name: Check if LOCAL is set
+        run: echo "LOCAL=${{ env.LOCAL }}, ACT=$ACT"
       #----------------------------------------------
       #             upload coverage stats
       # (requires CODECOV_TOKEN in repository secrets)
