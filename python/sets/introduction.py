@@ -1,9 +1,15 @@
+""" Introduction to Sets """
+
+
 def average(array: list) -> float:
-    return(sum(set(array))/len(set(array)))
+    """ Returns the average of the unique elements in the array """
+    result: float = sum(set(array))/len(set(array))
+    return result
 
 
 def main() -> None:
-    n = int(input())
+    """ Main function """
+    _ = int(input())
     arr = list(map(int, input().split()))
     print(average(arr))
 
