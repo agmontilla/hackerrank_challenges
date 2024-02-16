@@ -61,11 +61,16 @@ jobs:
         run: poetry run pytest --cov --cov-report=xml
       #----------------------------------------------
       #              run linters
+      # (requires .code_quality folder in root of repository)
+      # .code_quality folder should contain:
+      # - .flake8
+      # - mypy.ini
+      # - .pylintrc
       #----------------------------------------------
       - name: Run flake8
-        run: poetry run flake8 --config .code_quality/.flake8 python tests
+        run: poetry run flake8 --config .code_quality/.flake8 python/ tests/
       - name: Run mypy
-        run: poetry run mypy --config-file .code_quality/mypy.ini python tests
+        run: poetry run mypy --config-file .code_quality/mypy.ini --explicit-package-bases python/ tests/
       - name: Run pylint
         run: poetry run pylint --rcfile .code_quality/.pylintrc python tests
       #----------------------------------------------
