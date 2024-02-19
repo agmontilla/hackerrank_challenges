@@ -1,11 +1,15 @@
-from typing import List
+""" Detect HTML Tags and Attributes """
+
+from abc import ABC
 from html.parser import HTMLParser
-from typing import Optional, Tuple
+from typing import List, Optional, Tuple
 
 # create a subclass and override the handler methods
 
 
-class MyHTMLParser(HTMLParser):
+class MyHTMLParser(HTMLParser, ABC):
+    """ MyHTMLParser """
+
     def handle_starttag(self, tag: str, attrs: List[Tuple[str, Optional[str]]]) -> None:
         print(f"{tag}")
         if attrs:
@@ -17,9 +21,11 @@ class MyHTMLParser(HTMLParser):
 
 
 class Reader():
+    """ Reader """
     MAX_LINES = 100
 
     def readlines(self) -> List[str]:
+        """ Read lines """
         number_of_lines = int(input())
         if number_of_lines > self.MAX_LINES:
             raise ValueError("Number of lines is too big")
@@ -33,6 +39,7 @@ class Reader():
 
 
 def main() -> None:
+    """ Main function """
     reader = Reader()
     html_content = reader.readlines()
     parser = MyHTMLParser()

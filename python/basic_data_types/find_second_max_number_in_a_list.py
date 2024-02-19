@@ -1,5 +1,9 @@
-def get_runner_up(possible_runner_up: int, all_scores: map[int]) -> int:
-    # TODO: possible_runner_up is not used in this function. Remove it.
+"""" Find the second max number in a list """
+from typing import Any, List
+
+
+def get_runner_up(_: Any, all_scores: List[int]) -> int:
+    """ Get the second max number in a list """
 
     ordered_scores = sorted(all_scores)
 
@@ -12,5 +16,5 @@ def get_runner_up(possible_runner_up: int, all_scores: map[int]) -> int:
 
 if __name__ == "__main__":
     n = int(input())
-    arr = map(int, input().split())
+    arr = list(map(int, input().split()))
     print(get_runner_up(n, arr))

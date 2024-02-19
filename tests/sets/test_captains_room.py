@@ -1,7 +1,9 @@
+""" Test cases for the captain room problem. """
 from python.sets.captains_room import CaptainRoom
 
 
 class TestCaptainRoom:
+    """ Test cases for CaptainRoom class. """
 
     def test_captain_room_is_working_as_expected(self) -> None:
         """ Test that the captain room is working as expected. """

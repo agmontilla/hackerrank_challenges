@@ -1,3 +1,4 @@
+""" Find Angle MBC """
 import math
 
 
@@ -22,5 +23,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-
     main()

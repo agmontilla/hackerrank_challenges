@@ -1,7 +1,10 @@
+""" Alphabet Rangoli """
+
 import string
 
 
 def print_rangoli(size: int) -> None:
+    """ Print the rangoli """
     chs = string.ascii_lowercase[:size]
 
     for i in range(-size + 1, size):
@@ -12,6 +15,7 @@ def print_rangoli(size: int) -> None:
 
 
 def main() -> None:
+    """ Main function """
     n = int(input())
     print_rangoli(n)
 

@@ -1,8 +1,6 @@
 # Hackerrank Challenges
 
-[![continuos integration](https://github.com/agmontilla/hackerrank_challenges/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/agmontilla/hackerrank_challenges/actions/workflows/ci.yml)
-
-[![codecov](https://codecov.io/gh/agmontilla/hackerrank_challenges/branch/main/graph/badge.svg?token=VMDQQ8F4FQ)](https://codecov.io/gh/agmontilla/hackerrank_challenges)
+[![continuos integration](https://github.com/agmontilla/hackerrank_challenges/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/agmontilla/hackerrank_challenges/actions/workflows/ci.yml) [![codecov](https://codecov.io/gh/agmontilla/hackerrank_challenges/branch/main/graph/badge.svg?token=VMDQQ8F4FQ)](https://codecov.io/gh/agmontilla/hackerrank_challenges)
 
 ---
 

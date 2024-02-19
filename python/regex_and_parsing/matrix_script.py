@@ -1,11 +1,15 @@
+""" Matrix Script """
+
 import re
 from typing import List
 
 
 class Reader():
+    """ Reader """
 
     def readlines(self) -> List[str]:
-        n, m = map(int, input().split())
+        """ Read lines """
+        n, _ = map(int, input().split())
         matrix = []
 
         for _ in range(n):
@@ -16,7 +20,7 @@ class Reader():
 
 
 class MatrixScript():
-
+    """ MatrixScript """
     REGEX_PATTERN = r'(?<=[a-zA-Z0-9])[\W_]+(?=[a-zA-Z0-9])'
 
     def __init__(self, matrix: List[str]) -> None:
@@ -25,8 +29,11 @@ class MatrixScript():
         self.m = len(matrix[0])
 
     def get_message(self) -> str:
+        """ Get the message """
+
         # Combine all the rows of the matrix into a single string
-        message = ''.join([self.matrix[i][j] for j in range(self.m) for i in range(self.n)])
+        message = ''.join([self.matrix[i][j]
+                          for j in range(self.m) for i in range(self.n)])
 
         # Remove all the symbols from the message using regular expressions
         message = re.sub(self.REGEX_PATTERN, ' ', message)
@@ -34,6 +41,7 @@ class MatrixScript():
 
 
 def main() -> None:
+    """ Main function """
     reader = Reader()
     matrix = reader.readlines()
     matrix_script = MatrixScript(matrix)

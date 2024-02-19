@@ -1,4 +1,8 @@
+""" A program to check if a number is weird or not. """
+
+
 def main(n: int) -> None:
+    """ A function to check if a number is weird or not. """
     # n is odd
     if n % 2 != 0:
         print("Weird")
@@ -10,10 +14,7 @@ def main(n: int) -> None:
             print("Weird")
         else:
             print("Not Weird")
-    pass
 
 
 if __name__ == "__main__":
-
-    n = int(input())
-    main(n)
+    main(int(input()))

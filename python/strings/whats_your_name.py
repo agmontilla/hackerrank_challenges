@@ -1,8 +1,13 @@
+""" What's Your Name? """
+
+
 def print_full_name(a: str, b: str) -> None:
-    print("Hello {} {}! You just delved into python.".format(a, b))
+    """ Print the full name """
+    print(f"Hello {a} {b}! You just delved into python.")
 
 
 def main() -> None:
+    """ Main function """
     first_name = input()
     last_name = input()
     print_full_name(first_name, last_name)

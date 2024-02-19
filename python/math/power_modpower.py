@@ -1,4 +1,6 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
+""" Power Mod Power """
+
 
 class PowerModPower:
     """ Class to solve the problem """

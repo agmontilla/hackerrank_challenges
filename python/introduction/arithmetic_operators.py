@@ -1,10 +1,12 @@
+""" Arithmetic Operators """
+
+
 def main(a: int, b: int) -> None:
-    print("{}".format(a + b))
-    print("{}".format(a - b))
-    print("{}".format(a * b))
+    """ Main function """
+    print(f"{a + b}")
+    print(f"{a - b}")
+    print(f"{a * b}")
 
 
 if __name__ == "__main__":
-    a = int(input())
-    b = int(input())
-    main(a, b)
+    main(int(input()), int(input()))
