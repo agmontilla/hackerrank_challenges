@@ -28,7 +28,7 @@ class MergeTheTools:
 
     def _is_factor(self, length: int, k: int) -> bool:
         """ Check if k is a factor of length """
-        return True if length % k == 0 else False
+        return length % k == 0
 
 
 def merge_the_tools(string: str, k: int) -> None:

@@ -1,8 +1,11 @@
 """ Detect HTML Tags and Attributes """
+# pylint: disable=duplicate-code
 
 from abc import ABC
 from html.parser import HTMLParser
 from typing import List, Optional, Tuple
+
+from .utils import Reader
 
 # create a subclass and override the handler methods
 
@@ -18,24 +21,6 @@ class MyHTMLParser(HTMLParser, ABC):
     def _print_attrs(self, attrs: List[Tuple[str, Optional[str]]]) -> None:
         for attr_name, attr_value in attrs:
             print(f"-> {attr_name} > {attr_value if attr_value else 'None'}")
-
-
-class Reader():
-    """ Reader """
-    MAX_LINES = 100
-
-    def readlines(self) -> List[str]:
-        """ Read lines """
-        number_of_lines = int(input())
-        if number_of_lines > self.MAX_LINES:
-            raise ValueError("Number of lines is too big")
-        lines = []
-        for _ in range(number_of_lines):
-            lines.append(input())
-        return lines
-
-
-# instantiate the parser and fed it some HTML
 
 
 def main() -> None:

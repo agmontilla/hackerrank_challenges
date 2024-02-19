@@ -4,7 +4,7 @@ from pytest import CaptureFixture
 from python.math.mod_divmod import ModDivmod
 
 
-class TestModDivmod(object):
+class TestModDivmod():
     """ Test cases for ModDivmod class """
 
     def test_mod(self, capfd: CaptureFixture) -> None:
