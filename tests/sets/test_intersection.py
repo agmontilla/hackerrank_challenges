@@ -1,4 +1,5 @@
-""" """
+""" Test cases for intersection function"""
+# pylint: disable=duplicate-code
 
 from pytest import CaptureFixture, MonkeyPatch
 

@@ -1,4 +1,6 @@
 """ Test difference of two sets """
+# pylint: disable=duplicate-code
+
 from pytest import CaptureFixture, MonkeyPatch
 
 from python.sets.difference import main, run_difference
