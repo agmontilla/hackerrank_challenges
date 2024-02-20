@@ -18,8 +18,8 @@ TODO:
 
 - Check [coverage](https://coverage.readthedocs.io/en/latest/config.html) to improve coverage status
 
-Other posibilities are:
+Other posibilities are: [1](https://www.freecodecamp.org/news/how-to-generate-code-coverage-report-with-codecov-and-github-actions/), [2](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#testing-with-pytest-and-pytest-cov), [3](https://nedbatchelder.com/blog/202209/making_a_coverage_badge.html)
 
-- https://www.freecodecamp.org/news/how-to-generate-code-coverage-report-with-codecov-and-github-actions/
-- https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#testing-with-pytest-and-pytest-cov
-- https://nedbatchelder.com/blog/202209/making_a_coverage_badge.html
+Note:
+- I added a conditional step<sup>[1](https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#setting-an-environment-variable),[2](https://stackoverflow.com/questions/59882715/use-environment-variable-in-github-action-if?rq=3)</sup> to run upload code coverage (if I'm executing GH actions locally, it ignores uploading code coverage to CODECOV)
+- I'm running GH actions locally using [act](https://github.com/nektos/act)
