@@ -1,4 +1,8 @@
+""" String Formatting """
+
+
 def print_formatted(number: int) -> None:
+    """ Print the formatted string """
     width = len(f'{number:b}')
 
     for i in range(1, number+1):
@@ -6,6 +10,7 @@ def print_formatted(number: int) -> None:
 
 
 def main() -> None:
+    """ Main function """
     n = int(input())
     print_formatted(n)
 

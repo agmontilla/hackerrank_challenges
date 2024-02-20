@@ -1,11 +1,18 @@
-from typing import List
+""" HTML Parser - Part 1 """
+# pylint: disable=duplicate-code
+
+from abc import ABC
 from html.parser import HTMLParser
-from typing import Optional, Tuple
+from typing import List, Optional, Tuple
+
+from .utils import Reader
 
 # create a subclass and override the handler methods
 
 
-class MyHTMLParser(HTMLParser):
+class MyHTMLParser(HTMLParser, ABC):
+    """ MyHTMLParser """
+
     def handle_starttag(self, tag: str, attrs: List[Tuple[str, Optional[str]]]) -> None:
         print(f"Start : {tag}")
         self._print_attrs(attrs)
@@ -22,23 +29,8 @@ class MyHTMLParser(HTMLParser):
             print(f"-> {attr_name} > {attr_value if attr_value else 'None'}")
 
 
-class Reader():
-    MAX_LINES = 100
-
-    def readlines(self) -> List[str]:
-        number_of_lines = int(input())
-        if number_of_lines > self.MAX_LINES:
-            raise ValueError("Number of lines is too big")
-        lines = []
-        for _ in range(number_of_lines):
-            lines.append(input())
-        return lines
-
-
-# instantiate the parser and fed it some HTML
-
-
 def main() -> None:
+    """ Main function """
     reader = Reader()
     html_content = reader.readlines()
     parser = MyHTMLParser()

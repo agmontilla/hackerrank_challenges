@@ -1,4 +1,8 @@
+""" Write a function to check if a year is a leap year or not. """
+
+
 def is_leap(year: int) -> bool:
+    """ A function to check if a year is a leap year or not. """
     leap = False
 
     # Write your logic here
@@ -11,5 +15,4 @@ def is_leap(year: int) -> bool:
 
 
 if __name__ == "__main__":
-    year = int(input())
-    print(is_leap(year))
+    print(is_leap(int(input())))

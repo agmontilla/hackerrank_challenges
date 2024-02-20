@@ -109,3 +109,6 @@ ENV/
 
 # code quality service
 code_quality_service/*
+
+# github secrets
+*.secrets

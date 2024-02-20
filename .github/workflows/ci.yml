@@ -22,7 +22,7 @@ jobs:
         id: setup-python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: "3.9.13"
       #----------------------------------------------
       #  -----  install & configure poetry  -----
       #----------------------------------------------
@@ -60,11 +60,44 @@ jobs:
       - name: Run tests
         run: poetry run pytest --cov --cov-report=xml
       #----------------------------------------------
+      #              run linters
+      # (requires .code_quality folder in root of repository)
+      # .code_quality folder should contain:
+      # - .flake8
+      # - mypy.ini
+      # - .pylintrc
+      #----------------------------------------------
+      - name: Run flake8
+        run: poetry run flake8 --config .code_quality/.flake8 python/ tests/
+      - name: Run mypy
+        run: poetry run mypy --config-file .code_quality/mypy.ini --explicit-package-bases python/ tests/
+      - name: Run pylint
+        run: poetry run pylint --rcfile .code_quality/.pylintrc python tests
+      #----------------------------------------------
+      #             Set LOCAL env variable
+      # LOCAL is set to true if running locally. 
+      # If running locally, coverage stats are not uploaded in the next step
+      # Note: 
+      # - LOCAL value depends on the ACT env variable.
+      # - ACT is a env variable created by "act" tool used to run github actions locally
+      #----------------------------------------------
+      - name: Set LOCAL env variable
+        run: |
+          if [[ $ACT == 'true' ]]; then
+            echo "LOCAL=true" >> "$GITHUB_ENV"
+          else
+            echo "LOCAL=false" >> "$GITHUB_ENV"
+          fi
+      - name: Check if env LOCAL variable was set
+        run: echo "LOCAL=${{ env.LOCAL }}"
+      #----------------------------------------------
       #             upload coverage stats
       # (requires CODECOV_TOKEN in repository secrets)
       #----------------------------------------------
       - name: Upload coverage
-        uses: codecov/codecov-action@v3
+        if: ${{ env.LOCAL == 'false' }}
+        uses: codecov/codecov-action@v4
         with:
           file: ./coverage.xml
           fail_ci_if_error: true
+          token: ${{ secrets.CODECOV_TOKEN }}

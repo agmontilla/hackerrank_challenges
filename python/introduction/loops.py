@@ -1,8 +1,11 @@
+""" Loops """
+
+
 def square(n: int) -> None:
+    """ A function to print the square of numbers. """
     for number in range(n):
-        print("{}".format(number ** 2))
+        print(f"{number ** 2}")
 
 
 if __name__ == "__main__":
-    n = int(input())
-    square(n)
+    square(int(input()))

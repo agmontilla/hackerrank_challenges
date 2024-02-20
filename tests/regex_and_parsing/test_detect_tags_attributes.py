@@ -1,9 +1,16 @@
+""" Test cases for regex_and_parsing/detect_tags_attributes.py """
+
 from pytest import CaptureFixture
+
 from python.regex_and_parsing.detect_tags_attributes import MyHTMLParser
 
 
 class TestDetectTagsAttributes():
+    """ Test cases for MyHTMLParser class """
+
     def test_detect_tags_attributes(self, capfd: CaptureFixture) -> None:
+        """ MyHTMLParser is working as expected """
+
         html = """<head>
 <title>HTML</title>
 </head>

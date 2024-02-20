@@ -1,7 +1,9 @@
+""" Python List """
 from typing import Any, List
 
 
 def run_option(option: str, collection: List, args: Any) -> None:
+    """ Run the option on the collection """
 
     # TODO: better implemention of this could be using hassatr/getattr functions
 
@@ -27,6 +29,6 @@ if __name__ == "__main__":
     N = int(input())
     data: List = []
     for _ in range(N):
-        option, *line = input().split()
-        args = list(map(int, line))
-        run_option(option, data, args)
+        opt, *line = input().split()
+        arguments = list(map(int, line))
+        run_option(opt, data, arguments)

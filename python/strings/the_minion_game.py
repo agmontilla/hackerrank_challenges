@@ -1,7 +1,10 @@
+""" The Minion Game """
+
 VOWELS = ['a', 'e', 'i', 'o', 'u']
 
 
 def minion_game(string: str) -> None:
+    """ Minion game """
 
     length = len(string)
     vowel_score, consonant_score = 0, 0
@@ -21,6 +24,7 @@ def minion_game(string: str) -> None:
 
 
 def main() -> None:
+    """ Main function """
     s = input()
     minion_game(s)
 

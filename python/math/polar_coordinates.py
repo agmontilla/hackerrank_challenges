@@ -1,3 +1,4 @@
+""" Polar Coordinates """
 from cmath import phase
 from math import sqrt
 
@@ -14,6 +15,7 @@ class PolarCoordinates():
 
 
 def main() -> None:
+    """ Main function """
     complex_number = input()
     polar_coordinates = PolarCoordinates(complex_number)
     print(polar_coordinates)
