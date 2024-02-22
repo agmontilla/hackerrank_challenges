@@ -27,7 +27,7 @@ class TestMutations:
         assert result == 38
 
     def test_mutations_main_program(self, monkeypatch: MonkeyPatch, capfd: CaptureFixture) -> None:
-        """ """
+        """ Test if mutation main program is working as expected """
         # Arrange
         inputs = [
             "16", "1 2 3 4 5 6 7 8 9 10 11 12 13 14 24 52", "4",
