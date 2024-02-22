@@ -1,16 +1,27 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 """ Mutations """
+from typing import Set
 
-if __name__ == "__main__":
 
+def run_mutations(set_x: Set, operations: int) -> int:
+    """ Run Mutations """
+    for _1 in range(operations):
+        func, members_total = input().split()
+        set_tmp = set(list(map(int, input().split()))[:int(members_total)])
+
+        getattr(set_x, func)(set_tmp)
+
+    return sum(set_x)
+
+
+def main() -> None:
+    """ Main Function """
     _ = int(input())
-    set_A = set(map(int, input().split()))
+    set_a = set(map(int, input().split()))
     total_operations = int(input())
 
-    for _1 in range(total_operations):
-        func, _2 = input().split()
-        set_tmp = set(map(int, input().split()))
+    print(f'{run_mutations(set_a, total_operations)}')
 
-        getattr(set_A, func)(set_tmp)
 
-    print(f'{sum(set_A)}')
+if __name__ == "__main__":
+    main()
