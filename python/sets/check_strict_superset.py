@@ -3,18 +3,17 @@
 
 
 def check_strict_superset() -> bool:
-    """ Check Strict Superset """
+    """Check Strict Superset"""
 
     set_a = set(input().split())
 
-    checks = [set_a.issuperset(set(input().split()))
-              for _ in range(int(input()))]
+    checks = [set_a.issuperset(set(input().split())) for _ in range(int(input()))]
 
     return all(checks)
 
 
 def main() -> None:
-    """ Main Function """
+    """Main Function"""
     print(check_strict_superset())
 
 

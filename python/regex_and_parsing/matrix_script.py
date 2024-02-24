@@ -4,11 +4,11 @@ import re
 from typing import List
 
 
-class Reader():
-    """ Reader """
+class Reader:
+    """Reader"""
 
     def readlines(self) -> List[str]:
-        """ Read lines """
+        """Read lines"""
         n, _ = map(int, input().split())
         matrix = []
 
@@ -19,9 +19,10 @@ class Reader():
         return matrix
 
 
-class MatrixScript():
-    """ MatrixScript """
-    REGEX_PATTERN = r'(?<=[a-zA-Z0-9])[\W_]+(?=[a-zA-Z0-9])'
+class MatrixScript:
+    """MatrixScript"""
+
+    REGEX_PATTERN = r"(?<=[a-zA-Z0-9])[\W_]+(?=[a-zA-Z0-9])"
 
     def __init__(self, matrix: List[str]) -> None:
         self.matrix = matrix
@@ -29,23 +30,22 @@ class MatrixScript():
         self.m = len(matrix[0])
 
     def get_message(self) -> str:
-        """ Get the message """
+        """Get the message"""
 
         # Combine all the rows of the matrix into a single string
-        message = ''.join([self.matrix[i][j]
-                          for j in range(self.m) for i in range(self.n)])
+        message = "".join([self.matrix[i][j] for j in range(self.m) for i in range(self.n)])
 
         # Remove all the symbols from the message using regular expressions
-        message = re.sub(self.REGEX_PATTERN, ' ', message)
+        message = re.sub(self.REGEX_PATTERN, " ", message)
         return message
 
 
 def main() -> None:
-    """ Main function """
+    """Main function"""
     reader = Reader()
     matrix = reader.readlines()
     matrix_script = MatrixScript(matrix)
-    print(matrix_script.get_message(), end='')
+    print(matrix_script.get_message(), end="")
 
 
 # Rememeber, in hackerrank, you need to remove the main function

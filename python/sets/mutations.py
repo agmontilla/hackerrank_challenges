@@ -4,10 +4,10 @@ from typing import Set
 
 
 def run_mutations(set_x: Set, operations: int) -> int:
-    """ Run Mutations """
+    """Run Mutations"""
     for _1 in range(operations):
         func, members_total = input().split()
-        set_tmp = set(list(map(int, input().split()))[:int(members_total)])
+        set_tmp = set(list(map(int, input().split()))[: int(members_total)])
 
         getattr(set_x, func)(set_tmp)
 
@@ -15,12 +15,12 @@ def run_mutations(set_x: Set, operations: int) -> int:
 
 
 def main() -> None:
-    """ Main Function """
+    """Main Function"""
     _ = int(input())
     set_a = set(map(int, input().split()))
     total_operations = int(input())
 
-    print(f'{run_mutations(set_a, total_operations)}')
+    print(f"{run_mutations(set_a, total_operations)}")
 
 
 if __name__ == "__main__":

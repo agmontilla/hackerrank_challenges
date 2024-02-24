@@ -3,7 +3,7 @@ from typing import Any, List
 
 
 def get_runner_up(_: Any, all_scores: List[int]) -> int:
-    """ Get the second max number in a list """
+    """Get the second max number in a list"""
 
     ordered_scores = sorted(all_scores)
 

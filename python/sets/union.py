@@ -10,4 +10,4 @@ if __name__ == "__main__":
 
     students_total = len(english_students.union(french_students))
 
-    print(f'{students_total}')
+    print(f"{students_total}")

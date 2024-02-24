@@ -4,11 +4,11 @@ from pytest import CaptureFixture
 from python.math.integers_come_in_all_sizes import IntegersComeInAllSizes
 
 
-class TestIntegersComeInAllSizes():
-    """ Test cases for IntegersComeInAllSizes class """
+class TestIntegersComeInAllSizes:
+    """Test cases for IntegersComeInAllSizes class"""
 
     def test_integers_come_in_all_sizes_1(self, capfd: CaptureFixture) -> None:
-        """ IntegersComeInAllSizes is working as expected """
+        """IntegersComeInAllSizes is working as expected"""
         output = ["4710194409608608369201743232"]
         expected = "\n".join(output) + "\n"
 

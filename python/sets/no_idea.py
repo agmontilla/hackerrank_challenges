@@ -3,7 +3,7 @@
 
 
 def calculate_happines(array: list, set_a: set, set_b: set) -> int:
-    """ Calculate the happiness """
+    """Calculate the happiness"""
     happines = 0
     for elem in array:
         if elem in set_a:
@@ -14,7 +14,7 @@ def calculate_happines(array: list, set_a: set, set_b: set) -> int:
 
 
 def main() -> None:
-    """ Main function """
+    """Main function"""
     arr_dim, set_dim = map(int, input().split())
     arr = list(map(int, input().split()))[:arr_dim]
     set_a, set_b = [set(map(int, input().split()[:set_dim])) for _ in range(2)]
@@ -22,5 +22,5 @@ def main() -> None:
     print(calculate_happines(arr, set_a, set_b))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

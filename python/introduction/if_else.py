@@ -2,7 +2,7 @@
 
 
 def main(n: int) -> None:
-    """ A function to check if a number is weird or not. """
+    """A function to check if a number is weird or not."""
     # n is odd
     if n % 2 != 0:
         print("Weird")

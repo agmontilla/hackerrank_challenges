@@ -10,20 +10,20 @@ from .utils import Reader
 
 
 class MyHTMLParser(HTMLParser, ABC):
-    """ MyHTMLParser """
+    """MyHTMLParser"""
 
     def handle_comment(self, data: str) -> None:
-        print(">>> {}-line Comment".format("Multi" if data.count('\n') > 0 else "Single"))
+        print(">>> {}-line Comment".format("Multi" if data.count("\n") > 0 else "Single"))
         for line in data.splitlines():
             print(f"{line}")
 
     def handle_data(self, data: str) -> None:
-        if data != '\n':
+        if data != "\n":
             print(f">>> Data\n{data}")
 
 
 def main() -> None:
-    """ Main function """
+    """Main function"""
     reader = Reader()
     html_content = reader.readlines()
     parser = MyHTMLParser()

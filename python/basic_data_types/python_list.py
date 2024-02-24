@@ -3,7 +3,7 @@ from typing import Any, List
 
 
 def run_option(option: str, collection: List, args: Any) -> None:
-    """ Run the option on the collection """
+    """Run the option on the collection"""
 
     # TODO: better implemention of this could be using hassatr/getattr functions
 

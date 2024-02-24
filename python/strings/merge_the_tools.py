@@ -3,7 +3,7 @@ from typing import Generator
 
 
 class MergeTheTools:
-    """ Merge the Tools """
+    """Merge the Tools"""
 
     def __init__(self, s: str, k: int):
 
@@ -14,12 +14,12 @@ class MergeTheTools:
         self.k = k
 
     def run(self) -> None:
-        """ Run the program """
+        """Run the program"""
         for substring in self._substrings_generator():
             print("".join(dict.fromkeys(substring).keys()))
 
     def _substrings_generator(self) -> Generator[str, None, None]:
-        """ Generate the substrings """
+        """Generate the substrings"""
         amount_of_substrings = len(self.sentence) // self.k
 
         for i in range(amount_of_substrings):
@@ -27,17 +27,17 @@ class MergeTheTools:
             yield self.sentence[start:end]
 
     def _is_factor(self, length: int, k: int) -> bool:
-        """ Check if k is a factor of length """
+        """Check if k is a factor of length"""
         return length % k == 0
 
 
 def merge_the_tools(string: str, k: int) -> None:
-    """ Merge the tools """
+    """Merge the tools"""
     MergeTheTools(string, k).run()
 
 
 def main() -> None:
-    """ Main function """
+    """Main function"""
     string = input()
     k = int(input())
     merge_the_tools(string, int(k))

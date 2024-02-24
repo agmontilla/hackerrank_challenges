@@ -2,7 +2,7 @@
 
 
 def main(a: int, b: int) -> None:
-    """ Main function """
+    """Main function"""
     print(f"{a + b}")
     print(f"{a - b}")
     print(f"{a * b}")

@@ -2,13 +2,13 @@
 
 
 def swap_case(s: str) -> str:
-    """ Swap the case of the string """
+    """Swap the case of the string"""
     characters = [ch.lower() if ch.isupper() else ch.upper() for ch in s]
-    return ''.join(characters)
+    return "".join(characters)
 
 
 def main() -> None:
-    """ Main function """
+    """Main function"""
     sample = input()
     print(swap_case(sample))
 

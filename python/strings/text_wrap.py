@@ -4,12 +4,12 @@ import textwrap
 
 
 def wrap(string: str, max_width: int) -> str:
-    """ Wrap the string """
+    """Wrap the string"""
     return textwrap.fill(string, max_width)
 
 
 def main() -> None:
-    """ Main function """
+    """Main function"""
     string = input()
     max_width = int(input())
     print(wrap(string, max_width))

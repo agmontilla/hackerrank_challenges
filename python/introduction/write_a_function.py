@@ -2,7 +2,7 @@
 
 
 def is_leap(year: int) -> bool:
-    """ A function to check if a year is a leap year or not. """
+    """A function to check if a year is a leap year or not."""
     leap = False
 
     # Write your logic here

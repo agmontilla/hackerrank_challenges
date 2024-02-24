@@ -6,16 +6,16 @@
 
 
 def add(countries_number: int) -> None:
-    """ Add countries to a set and print the number of distinct countries """
-    countries = {input('') for _ in range(countries_number)}
+    """Add countries to a set and print the number of distinct countries"""
+    countries = {input("") for _ in range(countries_number)}
     print(len(countries))
 
 
 def main() -> None:
-    """ Main function """
-    countries_number = int(input(''))
+    """Main function"""
+    countries_number = int(input(""))
     add(countries_number)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

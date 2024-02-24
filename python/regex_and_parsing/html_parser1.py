@@ -11,7 +11,7 @@ from .utils import Reader
 
 
 class MyHTMLParser(HTMLParser, ABC):
-    """ MyHTMLParser """
+    """MyHTMLParser"""
 
     def handle_starttag(self, tag: str, attrs: List[Tuple[str, Optional[str]]]) -> None:
         print(f"Start : {tag}")
@@ -30,7 +30,7 @@ class MyHTMLParser(HTMLParser, ABC):
 
 
 def main() -> None:
-    """ Main function """
+    """Main function"""
     reader = Reader()
     html_content = reader.readlines()
     parser = MyHTMLParser()

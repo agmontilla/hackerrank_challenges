@@ -2,7 +2,7 @@
 
 
 def square(n: int) -> None:
-    """ A function to print the square of numbers. """
+    """A function to print the square of numbers."""
     for number in range(n):
         print(f"{number ** 2}")
 
