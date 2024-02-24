@@ -1,13 +1,9 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
-""" Symmetric Difference """
+""" Symmetric Difference (in a manual way)"""
 
-if __name__ == "__main__":
 
-    sets = []
-
-    for _ in range(2):
-        n = int(input())
-        sets.append(list(map(int, input().split()))[:n])
+def run_symetric_difference(sets: list[list[int]]) -> list[int]:
+    """Run Symmetric Difference"""
 
     unique = []
 
@@ -16,4 +12,21 @@ if __name__ == "__main__":
             if x_pos != y_pos:
                 unique.extend(list(set(x).difference(set(y))))
 
-    print(*sorted(unique), sep="\n")
+    return sorted(unique)
+
+
+def main() -> None:
+    """Main function"""
+    sets = []
+
+    for _ in range(2):
+        n = int(input())
+        sets.append(list(map(int, input().split()))[:n])
+
+    results = run_symetric_difference(sets)
+
+    print(*results, sep="\n")
+
+
+if __name__ == "__main__":
+    main()
