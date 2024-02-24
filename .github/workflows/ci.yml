@@ -9,6 +9,10 @@ on:
     branches:
       - main
 
+env:
+  LOCAL: false
+  REPOSITORY_DIRS: ''
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -67,12 +71,18 @@ jobs:
       # - mypy.ini
       # - .pylintrc
       #----------------------------------------------
+      - name: Get python modules name
+        run: |
+          REPOSITORY_DIRS=$(ls -d */ | sort -u | tr '\n' ' ')
+          echo "REPOSITORY_DIRS=$REPOSITORY_DIRS" >> "$GITHUB_ENV"
+      - name: Check if env REPOSITORY_DIRS variable was set
+        run: echo "REPOSITORY_DIRS=${{ env.REPOSITORY_DIRS }}"
       - name: Run flake8
-        run: poetry run flake8 --config .code_quality/.flake8 python/ tests/
+        run: poetry run flake8 --config .code_quality/.flake8 ${{ env.REPOSITORY_DIRS }}
       - name: Run mypy
-        run: poetry run mypy --config-file .code_quality/mypy.ini --explicit-package-bases python/ tests/
+        run: poetry run mypy --config-file .code_quality/mypy.ini --explicit-package-bases ${{ env.REPOSITORY_DIRS }}
       - name: Run pylint
-        run: poetry run pylint --rcfile .code_quality/.pylintrc python tests
+        run: poetry run pylint --rcfile .code_quality/.pylintrc ${{ env.REPOSITORY_DIRS }}
       #----------------------------------------------
       #             Set LOCAL env variable
       # LOCAL is set to true if running locally. 
