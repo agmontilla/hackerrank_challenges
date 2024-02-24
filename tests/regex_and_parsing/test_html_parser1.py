@@ -1,7 +1,7 @@
 """ Test for HTML Parser - I challenge. """
 from pytest import CaptureFixture
 
-from python.regex_and_parsing.html_parser1 import MyHTMLParser
+from challenges.regex_and_parsing.html_parser1 import MyHTMLParser
 
 
 class TestHTMLParser1:

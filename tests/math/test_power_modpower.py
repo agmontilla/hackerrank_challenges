@@ -1,7 +1,7 @@
 """ Test for PowerModPower class """
 from pytest import CaptureFixture
 
-from python.math.power_modpower import PowerModPower
+from challenges.math.power_modpower import PowerModPower
 
 
 class TestModPower:

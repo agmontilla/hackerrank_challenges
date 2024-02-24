@@ -2,7 +2,7 @@
 
 from pytest import CaptureFixture
 
-from python.regex_and_parsing.detect_tags_attributes import MyHTMLParser
+from challenges.regex_and_parsing.detect_tags_attributes import MyHTMLParser
 
 
 class TestDetectTagsAttributes:

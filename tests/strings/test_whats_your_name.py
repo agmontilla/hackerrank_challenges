@@ -1,7 +1,7 @@
 """ Test for the WhatsYourName module """
 from pytest import CaptureFixture
 
-from python.strings.whats_your_name import print_full_name
+from challenges.strings.whats_your_name import print_full_name
 
 
 class TestWhatsYourName:

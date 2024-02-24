@@ -1,7 +1,7 @@
 """ Test cases for the minion game """
 from pytest import CaptureFixture
 
-from python.strings.the_minion_game import minion_game
+from challenges.strings.the_minion_game import minion_game
 
 
 class TestMinionGame:

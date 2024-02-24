@@ -1,7 +1,7 @@
 """ Test cases for string validator """
 from pytest import CaptureFixture
 
-from python.strings.string_validators import check_string
+from challenges.strings.string_validators import check_string
 
 
 class TestStringValidator:

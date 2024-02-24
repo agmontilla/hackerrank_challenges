@@ -1,5 +1,5 @@
 """ Test for MatrixScript """
-from python.regex_and_parsing.matrix_script import MatrixScript
+from challenges.regex_and_parsing.matrix_script import MatrixScript
 
 
 class TestMatrixScript:

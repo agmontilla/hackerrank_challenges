@@ -1,5 +1,5 @@
 """ Test cases for the swap_case function """
-from python.strings.swap_case import swap_case
+from challenges.strings.swap_case import swap_case
 
 
 class TestSwapCase:

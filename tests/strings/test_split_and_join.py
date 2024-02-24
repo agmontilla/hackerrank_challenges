@@ -1,5 +1,5 @@
 """ Test cases for the split_and_join module. """
-from python.strings.split_and_join import split_and_join
+from challenges.strings.split_and_join import split_and_join
 
 
 class TestSplitAndJoin:

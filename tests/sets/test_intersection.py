@@ -3,7 +3,7 @@
 
 from pytest import CaptureFixture, MonkeyPatch
 
-from python.sets.intersection import main, run_intersection
+from challenges.sets.intersection import main, run_intersection
 
 
 class TestIntersection:

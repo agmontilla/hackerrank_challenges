@@ -1,5 +1,5 @@
 """ Test cases for the text_wrap module. """
-from python.strings.text_wrap import wrap
+from challenges.strings.text_wrap import wrap
 
 
 class TestWrap:

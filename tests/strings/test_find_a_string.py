@@ -1,5 +1,5 @@
 """ Test cases for find_a_string.py """
-from python.strings.find_a_string import count_substring
+from challenges.strings.find_a_string import count_substring
 
 
 class TestFindAString:

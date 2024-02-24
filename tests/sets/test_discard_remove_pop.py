@@ -2,7 +2,7 @@
 
 from pytest import CaptureFixture, MonkeyPatch
 
-from python.sets.discard_remove_pop import main, run_discard_remove_pop
+from challenges.sets.discard_remove_pop import main, run_discard_remove_pop
 
 
 class TestDiscardRemovePop:

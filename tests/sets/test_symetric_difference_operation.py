@@ -2,7 +2,7 @@
 
 from pytest import CaptureFixture, MonkeyPatch
 
-from python.sets.symetric_difference_operation import get_symetric_difference, main
+from challenges.sets.symetric_difference_operation import get_symetric_difference, main
 
 
 class TestSymetricDifferenceOperation:

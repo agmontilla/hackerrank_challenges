@@ -2,7 +2,7 @@
 
 from pytest import CaptureFixture, MonkeyPatch
 
-from python.sets.introduction import average, main
+from challenges.sets.introduction import average, main
 
 
 class TestSetIntroduction:

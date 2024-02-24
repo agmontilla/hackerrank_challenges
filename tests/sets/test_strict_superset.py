@@ -1,7 +1,7 @@
 """ Test cases for the strict_superset function """
 from pytest import MonkeyPatch
 
-from python.sets.check_strict_superset import check_strict_superset
+from challenges.sets.check_strict_superset import check_strict_superset
 
 
 class TestStrictSuperSet:

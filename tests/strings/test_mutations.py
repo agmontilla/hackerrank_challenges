@@ -1,5 +1,5 @@
 """ Test cases for the mutations module. """
-from python.strings.mutations import mutate_string
+from challenges.strings.mutations import mutate_string
 
 
 class TestMutations:

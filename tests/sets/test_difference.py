@@ -3,7 +3,7 @@
 
 from pytest import CaptureFixture, MonkeyPatch
 
-from python.sets.difference import main, run_difference
+from challenges.sets.difference import main, run_difference
 
 
 class TestDifference:

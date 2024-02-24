@@ -1,5 +1,5 @@
 """ Test cases for the captain room problem. """
-from python.sets.captains_room import CaptainRoom
+from challenges.sets.captains_room import CaptainRoom
 
 
 class TestCaptainRoom:

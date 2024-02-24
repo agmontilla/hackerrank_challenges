@@ -2,7 +2,7 @@
 
 from pytest import CaptureFixture, MonkeyPatch
 
-from python.sets.no_idea import calculate_happines, main
+from challenges.sets.no_idea import calculate_happines, main
 
 
 class TestHappines:

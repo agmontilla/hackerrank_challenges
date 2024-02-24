@@ -2,7 +2,7 @@
 
 from pytest import CaptureFixture, MonkeyPatch
 
-from python.sets.mutations import main, run_mutations
+from challenges.sets.mutations import main, run_mutations
 
 
 class TestMutations:

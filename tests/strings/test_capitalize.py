@@ -1,5 +1,5 @@
 """ Test for the capitalize module """
-from python.strings.capitalize import solve
+from challenges.strings.capitalize import solve
 
 
 class TestCapitalize:

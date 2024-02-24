@@ -2,7 +2,7 @@
 import pytest
 from pytest import CaptureFixture
 
-from python.strings.merge_the_tools import MergeTheTools
+from challenges.strings.merge_the_tools import MergeTheTools
 
 
 class TestMergeTheTools:

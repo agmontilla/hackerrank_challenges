@@ -1,6 +1,6 @@
 """ Test cases for find_angle_mbc.py """
 
-from python.math.find_angle_mbc import AngleMBC
+from challenges.math.find_angle_mbc import AngleMBC
 
 
 class TestAngleMBC:

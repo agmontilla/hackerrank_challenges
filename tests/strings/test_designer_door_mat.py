@@ -2,7 +2,7 @@
 import pytest
 from pytest import CaptureFixture
 
-from python.strings.designer_door_mat import check_columns, is_odd, print_dot
+from challenges.strings.designer_door_mat import check_columns, is_odd, print_dot
 
 
 class TestDesignerDoorMat:

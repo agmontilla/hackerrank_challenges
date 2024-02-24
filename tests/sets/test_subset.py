@@ -2,7 +2,7 @@
 
 from pytest import CaptureFixture, MonkeyPatch
 
-from python.sets.check_subset import check_subset
+from challenges.sets.check_subset import check_subset
 
 
 class TestSubset:

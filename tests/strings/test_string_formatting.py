@@ -1,7 +1,7 @@
 """ Test cases for string formatting """
 from pytest import CaptureFixture
 
-from python.strings.string_formatting import print_formatted
+from challenges.strings.string_formatting import print_formatted
 
 
 class TestPrintFormatting:

@@ -1,7 +1,7 @@
 """ Test cases for the TriangleQuest2 module. """
 from pytest import CaptureFixture
 
-from python.math.triangle_quest2 import TriangleQuest2
+from challenges.math.triangle_quest2 import TriangleQuest2
 
 
 class TestTriangleQuest2:

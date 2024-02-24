@@ -1,7 +1,7 @@
 """ Test cases for IntegersComeInAllSizes module. """
 from pytest import CaptureFixture
 
-from python.math.integers_come_in_all_sizes import IntegersComeInAllSizes
+from challenges.math.integers_come_in_all_sizes import IntegersComeInAllSizes
 
 
 class TestIntegersComeInAllSizes:

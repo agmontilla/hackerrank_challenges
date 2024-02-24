@@ -2,7 +2,7 @@
 
 from pytest import CaptureFixture, MonkeyPatch
 
-from python.sets.union import main, run_union
+from challenges.sets.union import main, run_union
 
 
 class TestUnion:

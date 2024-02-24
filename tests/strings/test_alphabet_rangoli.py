@@ -1,7 +1,7 @@
 """ Test cases for the alphabet_rangoli module. """
 from pytest import CaptureFixture
 
-from python.strings.alphabet_rangoli import print_rangoli
+from challenges.strings.alphabet_rangoli import print_rangoli
 
 
 class TestAlphabetRangoli:

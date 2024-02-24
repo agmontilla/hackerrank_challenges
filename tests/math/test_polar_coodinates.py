@@ -1,6 +1,6 @@
 """ Test Cases for Polar Coordinates Class """
 
-from python.math.polar_coordinates import PolarCoordinates
+from challenges.math.polar_coordinates import PolarCoordinates
 
 
 class TestPolarCoordinates:

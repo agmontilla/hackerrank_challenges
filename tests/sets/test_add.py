@@ -1,7 +1,7 @@
 """ Tests for the add function in the sets module. """
 from pytest import CaptureFixture, MonkeyPatch
 
-from python.sets.add import add
+from challenges.sets.add import add
 
 
 class TestAdd:

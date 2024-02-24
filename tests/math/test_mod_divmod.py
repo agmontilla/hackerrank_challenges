@@ -1,7 +1,7 @@
 """ Test cases for the ModDivmod class. """
 from pytest import CaptureFixture
 
-from python.math.mod_divmod import ModDivmod
+from challenges.math.mod_divmod import ModDivmod
 
 
 class TestModDivmod:
