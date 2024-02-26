@@ -1,3 +1,10 @@
 """ This is a simple hello world program. """
-if __name__ == "__main__":
+
+
+def main() -> None:
+    """Main function"""
     print("Hello, World!")
+
+
+if __name__ == "__main__":
+    main()
