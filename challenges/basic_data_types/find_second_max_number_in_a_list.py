@@ -14,7 +14,12 @@ def get_runner_up(_: Any, all_scores: List[int]) -> int:
     return runner_up
 
 
-if __name__ == "__main__":
+def main() -> None:
+    """Main function"""
     n = int(input())
     arr = list(map(int, input().split()))
     print(get_runner_up(n, arr))
+
+
+if __name__ == "__main__":
+    main()
