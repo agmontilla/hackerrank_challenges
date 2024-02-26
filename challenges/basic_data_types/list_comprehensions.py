@@ -11,10 +11,15 @@ def get_all_possible_cuboid_dim(x_coord: int, y_coord: int, z_coord: int, big_n:
     return coordinates
 
 
-if __name__ == "__main__":
+def main() -> None:
+    """Main function."""
     x = int(input())
     y = int(input())
     z = int(input())
     n = int(input())
 
     print(f"{get_all_possible_cuboid_dim(x, y, z, n)}")
+
+
+if __name__ == "__main__":
+    main()
