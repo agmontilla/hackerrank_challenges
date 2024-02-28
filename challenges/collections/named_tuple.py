@@ -1,4 +1,20 @@
-""" Named Tuple Chhallenge """
+""" Named Tuple Chhallenge
+
+This was my simply solution to this:
+
+Old solution:
+```python
+from collections import namedtuple
+
+if __name__ == "__main__":
+    regs, Student = int(input()), namedtuple('Student', input().split())
+    students = [Student(*input().split()) for _ in range(regs)]
+    print(sum([int(person.MARKS) for person in students])*1.00 / len(students))
+```
+
+But when I wanted to write unit test for this, I had some issues.
+I had to refactor the code to make it testable.
+"""
 from typing import NamedTuple
 
 
