@@ -26,13 +26,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-    # _, all_shoes = input(), Counter(list(map(int, input().split())))
-    # total = []
-
-    # for _ in range(int(input())):
-    #     size_ask, price = tuple(map(int, input().split()))
-    #     if all_shoes[size_ask]:
-    #         all_shoes = all_shoes - (Counter([size_ask]))
-    #         total.append(price)
-
-    # print(f"{sum(total)}")
