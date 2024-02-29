@@ -4,11 +4,9 @@
 class Cube:
     """Cube class"""
 
-    length: int
-    elements: list[int]
-
     def __init__(self, length: int) -> None:
         self.length = length
+        self.elements: list[int] = []
 
     def set_elements(self) -> None:
         """Set elements of the cube"""
