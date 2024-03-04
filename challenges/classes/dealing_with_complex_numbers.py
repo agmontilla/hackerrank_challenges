@@ -3,7 +3,7 @@
 import math
 
 
-class Complex(object):
+class Complex:
     """Class to save a complex number and perform operations with it"""
 
     def __init__(self, real: float, imaginary: float):
