@@ -37,16 +37,12 @@ class Complex(object):
             result = f"{self.real:.2f}+0.00i"
         elif self.real == 0:
             if self.imaginary >= 0:
-                # result = "0.00+%.2fi" % (self.imaginary)
                 result = f"0.00+{self.imaginary:.2f}i"
             else:
-                # result = "0.00-%.2fi" % (abs(self.imaginary))
                 result = f"0.00-{abs(self.imaginary):.2f}i"
         elif self.imaginary > 0:
-            # result = "%.2f+%.2fi" % (self.real, self.imaginary)
             result = f"{self.real:.2f}+{self.imaginary:.2f}i"
         else:
-            # result = "%.2f-%.2fi" % (self.real, abs(self.imaginary))
             result = f"{self.real:.2f}-{abs(self.imaginary):.2f}i"
 
         return result
