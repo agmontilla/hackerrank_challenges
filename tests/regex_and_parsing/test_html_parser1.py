@@ -1,4 +1,4 @@
-""" Test for HTML Parser - I challenge. """
+""" Test for HTML Parser - Part 1 challenge."""
 from pytest import CaptureFixture
 
 from challenges.regex_and_parsing.html_parser1 import MyHTMLParser

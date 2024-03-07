@@ -1,4 +1,4 @@
-""" Test cases for regex_and_parsing/detect_tags_attributes.py """
+""" Test cases for Detect Tags, Attributes and Attribute Values challenge."""
 
 from pytest import CaptureFixture
 
