@@ -16,8 +16,6 @@ def main() -> None:
     """Main function."""
     cases = [is_float(input()) for _ in range(int(input()))]
     print(*cases, sep="\n")
-    # cases = [True if PATTERN.search(input()) else False for _ in range(int(input()))]
-    # print(*cases, sep="\n")
 
 
 if __name__ == "__main__":
