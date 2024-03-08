@@ -3,7 +3,7 @@
 import re
 from typing import List
 
-from utils import MatrixReader
+from .utils import MatrixReader
 
 
 class MatrixScript:
