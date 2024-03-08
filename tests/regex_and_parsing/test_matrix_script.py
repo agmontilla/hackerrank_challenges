@@ -1,9 +1,19 @@
 """ Test for MatrixScript """
-from challenges.regex_and_parsing.matrix_script import MatrixScript
+from pytest import CaptureFixture, MonkeyPatch
+
+from challenges.regex_and_parsing.matrix_script import MatrixScript, main
 
 
 class TestMatrixScript:
     """Test cases for MatrixScript class"""
+
+    def test_main(self, monkeypatch: MonkeyPatch, capsys: CaptureFixture) -> None:
+        """Test main function"""
+        inputs = ["7 3", "Tsi", "h%x", "i #", "sM ", "$a ", "#t%", "ir!"]
+        monkeypatch.setattr("builtins.input", lambda: inputs.pop(0))
+        main()
+        captured = capsys.readouterr()
+        assert captured.out == "This is Matrix#  %!"
 
     def test_decode_message(self) -> None:
         """Get message from matrix is working as expected"""
