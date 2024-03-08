@@ -1,3 +1,4 @@
+""" Test StartEnd class """
 from pytest import CaptureFixture, MonkeyPatch, mark
 
 from challenges.regex_and_parsing.start_end import StartEnd, main
