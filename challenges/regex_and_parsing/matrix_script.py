@@ -3,20 +3,7 @@
 import re
 from typing import List
 
-
-class Reader:
-    """Reader"""
-
-    def readlines(self) -> List[str]:
-        """Read lines"""
-        n, _ = map(int, input().split())
-        matrix = []
-
-        for _ in range(n):
-            row = input()
-            matrix.append(row)
-
-        return matrix
+from utils import MatrixReader
 
 
 class MatrixScript:
@@ -42,7 +29,7 @@ class MatrixScript:
 
 def main() -> None:
     """Main function"""
-    reader = Reader()
+    reader = MatrixReader()
     matrix = reader.readlines()
     matrix_script = MatrixScript(matrix)
     print(matrix_script.get_message(), end="")
