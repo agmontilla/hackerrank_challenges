@@ -1,4 +1,6 @@
 """Test Standarize Mobile Number Using Decorators Challenge"""
+from typing import Generator
+
 from pytest import CaptureFixture, MonkeyPatch
 
 from challenges.closures_and_decorators.standarize_mobile_number import (
@@ -37,7 +39,7 @@ class TestStandarizeMobileNumber:
         phone_numbers = ["07895462130", "919875641230", "9195969878"]
 
         @wrapper
-        def to_be_decorated(phone_numbers: list[str]) -> None:
+        def to_be_decorated(phone_numbers: Generator[str, None, None]) -> None:
             assert list(phone_numbers) == ["+91 78954 62130", "+91 98756 41230", "+91 91959 69878"]
 
         to_be_decorated(phone_numbers)
