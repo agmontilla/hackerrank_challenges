@@ -1,3 +1,4 @@
+""" Array Mathematics Challenge"""
 import numpy as np
 
 OPERATIONS = ("add", "subtract", "multiply", "divide", "mod", "power")

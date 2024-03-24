@@ -1,3 +1,4 @@
+""" Test Array Mathematics Challenge """
 import numpy as np
 from pytest import CaptureFixture, MonkeyPatch
 

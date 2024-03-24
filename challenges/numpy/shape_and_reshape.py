@@ -2,7 +2,7 @@
 import numpy as np
 
 
-def arrays(arr: list[str]) -> np.ndarray:
+def reshape_an_array(arr: list[str]) -> np.ndarray:
     """Set every element to int and reshape the array"""
     return np.array(arr, dtype=int).reshape(3, 3)
 
@@ -10,7 +10,7 @@ def arrays(arr: list[str]) -> np.ndarray:
 def main() -> None:
     """Main function"""
     arr = input().strip().split(" ")
-    result = arrays(arr)
+    result = reshape_an_array(arr)
     print(result)
 
 

@@ -1,7 +1,7 @@
 """Test Shape and Reshape Challenge"""
 from pytest import CaptureFixture, MonkeyPatch
 
-from challenges.numpy.shape_and_reshape import arrays, main
+from challenges.numpy.shape_and_reshape import main, reshape_an_array
 
 
 class TestShapeAndReshape:
@@ -20,4 +20,4 @@ class TestShapeAndReshape:
         """Test arrays function is working as expected"""
         arr = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
         expected = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-        assert arrays(arr).tolist() == expected
+        assert reshape_an_array(arr).tolist() == expected
