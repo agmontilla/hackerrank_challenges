@@ -1,7 +1,7 @@
 """ Test for Sum and Prod Challenge """
 from pytest import CaptureFixture, MonkeyPatch
 
-from challenges.numpy.sum_and_prod import get_entries, main, perform_operations
+from challenges.numpy.sum_and_prod import main, perform_operations
 
 
 class TestSumAndProd:
@@ -23,13 +23,4 @@ class TestSumAndProd:
         expected_output = 24
 
         result = perform_operations(data)
-        assert result == expected_output
-
-    def test_get_entries(self, monkeypatch: MonkeyPatch) -> None:
-        """Test get_entries function"""
-        input_values = ["2 2", "1 2", "3 4"]
-        expected_output = [[1, 2], [3, 4]]
-        monkeypatch.setattr("builtins.input", lambda: input_values.pop(0))
-
-        result = get_entries()
         assert result == expected_output

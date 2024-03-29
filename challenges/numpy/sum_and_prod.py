@@ -1,17 +1,7 @@
 """ Sum and Prod Challenge """
 import numpy as np
 
-
-def get_entries() -> list[list[int]]:
-    """Get entries from user input"""
-    n, m = map(int, input().split())
-
-    data = []
-
-    for _ in range(n):
-        data.append(list(map(int, input().split()))[:m])
-
-    return data
+from challenges.numpy.utils import get_entries
 
 
 def perform_operations(data: list[list[int]]) -> int:
