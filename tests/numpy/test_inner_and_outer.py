@@ -10,7 +10,7 @@ class TestInnerOuter:
 
     def test_main(self, capsys: CaptureFixture, monkeypatch: MonkeyPatch) -> None:
         """Test main function"""
-        input_values = ["1 2", "3 4"]
+        input_values = ["0 1", "2 3"]
         expected_output = "3\n[[0 0]\n [2 3]]\n"
         monkeypatch.setattr("builtins.input", lambda: input_values.pop(0))
         main()
