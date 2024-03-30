@@ -11,8 +11,7 @@ def depth(elem: etree.Element, level: int) -> int:
     global MAXDEPTH  # pylint: disable=global-statement
     level += 1
 
-    if level >= MAXDEPTH:
-        MAXDEPTH = level
+    MAXDEPTH = max(MAXDEPTH, level)
 
     for child in elem:
         depth(child, level)
