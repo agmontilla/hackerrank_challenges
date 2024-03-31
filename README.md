@@ -23,3 +23,9 @@ Other posibilities are: [1](https://www.freecodecamp.org/news/how-to-generate-co
 Note:
 - I added a conditional step<sup>[1](https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#setting-an-environment-variable),[2](https://stackoverflow.com/questions/59882715/use-environment-variable-in-github-action-if?rq=3)</sup> to run upload code coverage (if I'm executing GH actions locally, it ignores uploading code coverage to CODECOV)
 - I'm running GH actions locally using [act](https://github.com/nektos/act)
+
+## Isort 
+
+I've configured `isort` to use the existing `black` profile. You can find more details about [here](https://pycqa.github.io/isort/docs/configuration/black_compatibility.html). 
+
+Sommething important is the different ways `isort` has to organize [imports](https://pycqa.github.io/isort/docs/configuration/multi_line_output_modes.html). Another helpful link is [this](https://stackoverflow.com/questions/69205085/how-to-make-isort-always-produce-multi-line-output-when-there-are-multiple-impor). 
